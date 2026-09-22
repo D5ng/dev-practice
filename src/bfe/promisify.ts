@@ -55,7 +55,7 @@ export function promisify<TArgs extends unknown[], TData>(func: (...args: [...TA
 
 /**
  * 목적:
- * `promisify` 함수는 전달받은 `func` 함수를 Promise 기반 함수로 변환하여 반환한다
+ * `promisify` 함수는 전달받은 콜백 `func` 함수를 Promise 기반 함수로 변환하여 반환한다
  *
  * 입력:
  * `func`: (...args: [...TArgs, ErrorFirstCallback<TData>]) => void

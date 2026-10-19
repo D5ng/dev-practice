@@ -27,7 +27,25 @@
  * @param {string} input
  * @returns {string}
  */
-export function removeChars(input: string) {}
+export function removeChars(input: string) {
+	if (input.length === 0) {
+		return ""
+	}
+
+	let removedCharacters = [...input].filter((char) => char !== "b").join("")
+
+	while (removedCharacters.includes("ac")) {
+		const replaced = removedCharacters.replace("ac", "")
+
+		if (replaced) {
+			removedCharacters = replaced
+		} else {
+			return replaced
+		}
+	}
+
+	return removedCharacters
+}
 
 /**
  * 목적
